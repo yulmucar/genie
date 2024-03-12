@@ -19,7 +19,7 @@ $(function () {
   })
 
   //뮤비
-  let mvMenu = $('.mv .title_tab p');
+  let mvMenu = $('.mv .title_tab a');
   let mvList = $('.mv .mv-list');
   
   mvMenu.click(function (){

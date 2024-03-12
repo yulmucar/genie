@@ -217,7 +217,8 @@ html, body {
   position: relative;
 }
 #main .main_visual .visual a figure {
-  height: 673px;
+  max-height: 673px;
+  height: 40.29vw;
 }
 #main .main_visual .visual a img {
   width: 100%;
@@ -279,7 +280,8 @@ html, body {
   font-size: 20px;
 }
 #main .new .new_album {
-  height: 400px;
+  max-height: 400px;
+  height: 20.83vw;
   display: flex;
   justify-content: space-between;
 }
@@ -309,6 +311,15 @@ html, body {
 }
 #main .new .new_album .album--image--text {
   padding: 18px 0;
+}
+#main .new .new_album .album--image--text h5 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-bottom: 20px;
+}
+#main .new .new_album .album--image--text p {
+  font-size: 20px;
 }
 #main .chart {
   max-width: 1670px;
@@ -374,27 +385,31 @@ html, body {
   justify-content: flex-end;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 30px;
   transform: translateY(-50%);
 }
 #main .chart .track .track_list .scroll .main--image--icon a {
   display: block;
+}
+#main .chart .track .btn_wrap { /* 부모에다가 absolute를 줬어야했음 */
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+#main .chart .track .btn_wrap .next {
+  position: absolute;
+  right: -40px;
 }
 #main .chart .track .btn_wrap button {
   width: 40px;
   height: 40px;
   background-color: #fff;
   border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: -20px;
-  transform: translateY(-50%);
   font-size: 20px;
   font-family: "CookieRun-Regular";
-}
-#main .chart .track .btn_wrap button.next {
-  left: auto;
-  right: 0;
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
 }
 #main .hot_artist {
   max-width: 1670px;
@@ -423,7 +438,7 @@ html, body {
 }
 #main .hot_artist .artist .artist--image {
   max-width: 753px;
-  width: 45.08%;
+  width: 48.5%;
   position: relative;
 }
 #main .hot_artist .artist .artist--image img {
@@ -434,7 +449,7 @@ html, body {
 }
 #main .hot_artist .artist--text {
   max-width: 753px;
-  width: 45.08%;
+  width: 48.5%;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.6705882353);
   position: absolute;
@@ -488,7 +503,7 @@ html, body {
   justify-content: flex-end;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 30px;
   transform: translateY(-50%);
 }
 #main .hot_artist .artist .track_list .scroll .main--image--icon a {
@@ -496,7 +511,7 @@ html, body {
 }
 #main .editor {
   max-width: 1670px;
-  margin: 100px 75px;
+  margin: 150px 75px;
   /* .title end */
 }
 #main .editor .title {
@@ -536,16 +551,18 @@ html, body {
   display: flex;
   justify-content: space-between;
   display: none;
+  gap: 1rem;
 }
 #main .editor--list.on {
   display: flex;
 }
 #main .editor--list--item {
   max-width: 365px;
-  width: 21.85%;
+  width: 25.85%;
 }
 #main .editor--list--item figure {
-  height: 300px;
+  max-height: 300px;
+  height: 17.96vw;
 }
 #main .editor--list--item figure img {
   width: 100%;
@@ -558,6 +575,7 @@ html, body {
   position: relative;
 }
 #main .editor--list--text h6 {
+  font-size: 25px;
   line-height: 1.2;
   padding: 20px 0;
 }
@@ -571,7 +589,7 @@ html, body {
 }
 #main .mv {
   max-width: 1670px;
-  margin: 100px 75px;
+  margin: 150px 75px;
   position: relative;
   /* .title end */
 }
@@ -589,6 +607,12 @@ html, body {
   display: flex;
   gap: 20px;
   padding-top: 10px;
+}
+#main .mv .title .title_tab a:hover {
+  color: #0095ff;
+}
+#main .mv .title .title_tab a.on {
+  color: #0095ff;
 }
 #main .mv .title .title_more p {
   font-size: 20px;
@@ -879,4 +903,71 @@ html, body {
     left: 0;
     transform: none;
   }
-}/*# sourceMappingURL=style.css.map */
+  #main .new .new_album .album--image {
+    max-height: 283px;
+    height: 14.81vw;
+  }
+}
+@media screen and (max-width: 1440px) {
+  #main .new .new_album {
+    height: 300px;
+  }
+  #main .new .new_album .album--image {
+    max-height: 283px;
+    height: 13.93vw;
+  }
+  #main .new .new_album .album--image--text h5 {
+    font-size: 23px;
+  }
+  #main .new .new_album .album--image--text p {
+    font-size: 18px;
+  }
+  /* chart */
+  #main .chart .track .track_list .scroll .main--image--icon {
+    right: 0;
+  }
+  /* hot_artist */
+  #main .hot_artist .artist .track_list .scroll .main--image--icon {
+    right: 0;
+  }
+  /* .editor */
+  #main .editor--list--item {
+    width: 25.34%;
+    height: 20.83vw;
+  }
+  #main .editor--list--text h6 {
+    font-size: 20px;
+  }
+  #main .editor--list--text p {
+    font-size: 16px;
+  }
+  /* mv */
+  #main .mv .swiper .swiper-slide .mv--item figure {
+    height: 14vw;
+  }
+  #main .mv .swiper .swiper-slide .mv--item .mv--text h6 {
+    font-size: 25px;
+  }
+  #main .mv .swiper .swiper-slide .mv--item .mv--text P {
+    font-size: 20px;
+  }
+  /* magazine */
+  #main .magazine .list--item figure {
+    max-height: 495px;
+    height: 21.94vw;
+  }
+  #main .magazine .list--text h6 {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+  #main .magazine .list--text p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #main .new .new_album .album--image {
+    max-height: 283px;
+    height: 14.93vw;
+  }
+}
+/* 테블릿 *//*# sourceMappingURL=style.css.map */
