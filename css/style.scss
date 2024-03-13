@@ -115,7 +115,6 @@ html,body {
 /*     margin: 0 auto; */
     .logo {
         margin: 20px 25px 10px;
-        padding-bottom: 10px;
         text-align: center;
         border-bottom: 1px solid #bebebe;
     }
@@ -202,8 +201,7 @@ html,body {
     padding-left: 250px;
     .main_visual {
         max-width: 1670px;
-        width: 91.01%;
-        margin: 0 75px;
+        margin: 0 75px 100px;
         position: relative;
         .visual
             a {
@@ -276,7 +274,8 @@ html,body {
             height: 20.83vw;
             display: flex;
             justify-content: space-between;
-            .album {                               
+            .album {          
+                /* 284px */                     
                 width: 18.9%;
                 &--image {                                            
                     max-height: 283px;
@@ -368,11 +367,12 @@ html,body {
                 }    
                 .main--image--text {                    
                     span {
+                        font-size: 20px;
                         font-weight: 700;
                     }
                     p{
                         padding-top: 8px;
-                        font-size: 18px;
+                        font-size: 17px;
                         color: #5e5e5e;
                     }                    
                 }
@@ -489,10 +489,11 @@ html,body {
                 .main--image--text {                    
                     span {
                         font-weight: 700;
+                        font-size: 20px;
                     }
                     p{
                         padding-top: 8px;
-                        font-size: 18px;
+                        font-size: 17px;
                         color: #5e5e5e;
                     }                    
                 }
@@ -550,7 +551,8 @@ html,body {
                 }
             }           
         }
-        &--list {            
+        &--list {     
+            height: 442px;       
             display: flex;
             justify-content: space-between;
             display: none;
@@ -687,7 +689,7 @@ html,body {
             display: flex;
             justify-content: space-between;
             h4 {
-                font-size: 1.5rem;
+                font-size: 30px;
                 font-weight: 600;
                 padding-bottom: 20px;
             }
@@ -719,7 +721,7 @@ html,body {
                 padding: 10px 0;
                 h6 {
                     font-size: 1.3rem;
-                    font-weight: 500;
+                    font-weight: 600;
                     padding: 10px 0;
                 }
                 p {
@@ -802,7 +804,7 @@ html,body {
         }
         .info {
             padding: 30px 0;
-            font-size: 16px;
+            font-size: 15px;
             ul {
                 display: flex;
             li {padding-right: 20px;}
@@ -812,6 +814,8 @@ html,body {
         .company_info {
             ul {
                 display: flex;
+                flex-wrap: wrap;
+
                 li {
                     display: flex;
                     padding-right: 20px;
@@ -917,6 +921,9 @@ html,body {
         left: 0;
         transform: none;
     }
+    #main .main_visual .visual a figure {
+        
+    }
     #main .new .new_album .album--image {
         max-height: 283px;
         height: 14.81vw;
@@ -947,16 +954,13 @@ html,body {
         right: 0;
     }
     /* .editor */
+    #main .editor--list {height: 380px;}
     #main .editor--list--item {
         width: 25.34%;
         height: 20.83vw;
     }
-    #main .editor--list--text h6 {
-        font-size: 20px;
-    }
-    #main .editor--list--text p {
-        font-size: 16px;
-    }
+    #main .editor--list--text h6 {font-size: 20px;}
+    #main .editor--list--text p {font-size: 16px;}
 
     /* mv */
     #main .mv .swiper .swiper-slide .mv--item figure {
@@ -970,30 +974,106 @@ html,body {
     }
 
     /* magazine */
+    #main .magazine {padding-bottom: 0;}
+    #main .magazine .list {height: 450px;}
     #main .magazine .list--item figure {
         max-height: 495px; 
         height: 21.94vw;
     }
     #main .magazine .list--text h6 {
-        font-size: 1.1rem;
+        font-size: 25px;
         line-height: 1.2;
     }
-    #main .magazine .list--text p {
-        font-size: 0.8rem;
-    }
-    
-    
+    #main .magazine .list--text p {font-size: 18px;}
+
+    /* footer */
+    #footer .footer_inner .company_info ul {flex-wrap: wrap;}
+
 }
 
 
 @media screen and (max-width: 1280px) {
+    #main .main_visual .text {left: 80px;}
+    #main .main_visual .main_icon {left: 80px;}
+    #main .main_visual .text h3 {font-size: 1.5rem;}
+    #main .main_visual .text p {
+        line-height: 1.4;
+        font-size: 16px;
+    }
+    /*new  */
+    #main .new .new_album .album {width: 22.18%;}
+    #main .new .new_album .album:last-child {display: none;}
     #main .new .new_album .album--image {
         max-height: 283px;
         height: 14.93vw; 
+    }
+    /* track */
+    #main .chart .track .track_list .scroll .main--image--icon {
+        display: none;
+    }
+    /* hot_artist */
+
+    #main .hot_artist .artist .track_list .scroll .main--image--icon {
+        display: none;
+    }
+    #main .editor {
+        margin: 100px 75px;
+    }
+    #main .mv {
+        margin: 100px 75px;
+    }
+    #main .mv .swiper .swiper-slide .mv--item .mv--text h6 {
+        font-size: 23px;
+    }
+    #main .mv .swiper .swiper-slide .mv--item .mv--text P {
+        font-size: 16px;
+    }
+    #main .magazine .list {height: 400px;}
+    #main .magazine .list--text h6 {
+        font-size: 23px;
+    }
+    #main .download .gin--text figure {
+        margin-bottom: 10px;
+    }
+    #main .download .gin--text h3 {font-size: 40px;}
+    
+
+    /* footer */
+    #footer .footer_inner .info {
+        font-size: 14px;
     }
 }
 
 /* 테블릿 */
 @media screen and (max-width: 1024px) {
+    html,body {        
+        font-size: var(--small-size);
+    }
 
+    .pc {display: none;}
+    .mobile {display: block;}
+
+    .header {
+        width: 100%;
+        height: 65px;
+        border-right: none;
+        position: relative;
+    }
+    .header .inner .mobile_menu {        
+        position: absolute;
+        top: 0;
+        right: 25px;
+    }
+    .header .inner .mobile_menu img {
+        width: 40px;
+        height: 40px;
+    }
+    .header .inner .logo {
+        text-align: start;
+        border-bottom: none;
+    }
+    .header .util .saerch {
+        width: 100%;
+    }
+    
 }
