@@ -6,6 +6,21 @@ $(function () {
 
   //🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚스크립트시작
 
+  //해더 검색창
+  let searchBtn = document.getElementsByClassName('mobile_saerch')[0];
+  let searchBox = document.getElementsByClassName('saerch')[0];
+  let searchX = document.getElementsByClassName('x')
+
+  searchBtn.addEventListener('click', () => {
+    //alert();
+    if(getComputedStyle(searchBox).display === 'none'){
+        searchBox.style.display = 'block'
+    }else {
+      searchBox.style.display = 'none'
+    }
+  })
+
+
   //에디터탭메뉴
   let editorMenu = $('.editor .editor_tab li');
   let editorList = $('.editor .editor--list');

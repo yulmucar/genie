@@ -20,18 +20,23 @@
 
 <body>
     <div class="wrap">
-        <header class="header header">
+        <header class="header" id="header">
             <div class="inner">
-                <h1 class="logo">
+                <div class="logo">
                     <a href="#">
-                        <img src="img/logo_genie_5.0.png" alt="지니뮤직로고">
+                        <figure>
+                            <img src="img/logo_genie_5.0.png" alt="지니뮤직로고">
+                        </figure>                        
                     </a>
-                </h1>
-
-                <button class="mobile_menu mobile">
-                    <img src="img/icon/메뉴.png" alt="모바일메뉴">
-                </button>
-
+                </div>
+                <div class="mobile_buttom mobile">
+                    <button class="mobile_saerch mobile">      
+                        <img src="img/icon/검색.png" alt="모바일메뉴">
+                    </button>
+                    <button class="mobile_menu mobile">      
+                        <img src="img/icon/메뉴.png" alt="모바일메뉴">
+                    </button>
+                </div>
                 <div class="util">
                     <div class="login pc">
                         <a href="#">
@@ -42,8 +47,15 @@
                     <button class="user pc">이용권구매</button>
 
                     <div class="saerch">
-                        <input type="text" placeholder="지니검색" /> <!-- password도 사용가능 -->
-                        <img src="img/icon/검색.png" alt="검색아이콘" />
+                        <div class="saerch--item">
+                            <input type="text" placeholder="지니검색" /> <!-- password도 사용가능 -->
+                            <img src="img/icon/검색.png" alt="검색아이콘" />
+                        </div>                        
+                        <button class="x">                            
+                            <a href="#">
+                                <img src="img/icon/엑스.png" alt="엑스">
+                            </a>
+                        </button>
                     </div><!-- .search end -->
 
                     <nav class="pc_nav pc">
@@ -1182,10 +1194,14 @@
                       </audio>
                     <!-- <input type="range" min="1" max="12" id="ex-in">
                     <div id="ex-out"></div> -->
+                    
+                </div>
+                <div class="sound--list">
                     <figure>
-                        <img src="img/icon/플레이리스트.png" alt="">
+                    <img src="img/icon/플레이리스트.png" alt="">
                     </figure>
                 </div>
+                
             </div>
         </div>
     </div><!-- #wrap end -->

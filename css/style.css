@@ -98,7 +98,6 @@ html, body {
 
 .wrap {
   max-width: 1920px;
-  height: 100%;
   margin: 0 auto;
   /* position: relative; */
 }
@@ -119,8 +118,14 @@ html, body {
 }
 .header .logo {
   margin: 20px 25px 10px;
+  padding-bottom: 15px;
   text-align: center;
   border-bottom: 1px solid #bebebe;
+}
+.header .logo a img {
+  max-height: 50px;
+  height: 6.54vw;
+  vertical-align: middle;
 }
 .header .util {
   width: 250px;
@@ -153,11 +158,13 @@ html, body {
 }
 .header .util .saerch {
   margin-top: 10px;
-  position: relative;
   border-bottom: 1px solid #bebebe;
   padding-bottom: 20px;
 }
-.header .util .saerch input[type=text] {
+.header .util .saerch--item {
+  position: relative;
+}
+.header .util .saerch--item input[type=text] {
   width: 200px;
   height: 55px;
   border: 1px solid #0095ff;
@@ -166,19 +173,26 @@ html, body {
   padding: 10px 36px 10px 50px;
   font-size: 20px;
 }
+.header .util .saerch--item img {
+  width: 40px;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-weight: 500;
+}
 .header .util .saerch input::-moz-placeholder {
   font-size: 20px;
 }
 .header .util .saerch input::placeholder {
   font-size: 20px;
 }
-.header .util .saerch img {
-  width: 40px;
-  vertical-align: middle;
-  position: absolute;
-  top: 8px;
-  left: 10px;
-  font-weight: 500;
+.header .util .saerch input:focus {
+  outline: 1px solid #0095ff;
+}
+.header .util .saerch .x {
+  display: none;
 }
 .header .util *:focus { /* Tab키로 넘어가는지 확인 */
   /* outline: 0; */
@@ -890,11 +904,11 @@ html, body {
   display: flex;
   align-items: center;
 }
-.play_list .sound figure {
+.play_list .sound--list figure {
   height: 25px;
   padding: 0 30px;
 }
-.play_list .sound figure img {
+.play_list .sound--list figure img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1059,20 +1073,110 @@ html, body {
     border-right: none;
     position: relative;
   }
-  .header .inner .mobile_menu {
+  .header .logo {
+    margin: 0;
+  }
+  .header .inner .mobile_buttom {
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 25px;
+    transform: translateY(-50%);
+    display: flex;
+  }
+  .header .inner .mobile_saerch img {
+    width: 40px;
+    height: 40px;
   }
   .header .inner .mobile_menu img {
     width: 40px;
     height: 40px;
   }
-  .header .inner .logo {
+  .header .logo {
+    height: 65px;
+    border-bottom: none;
     text-align: start;
     border-bottom: none;
+    padding-bottom: 0;
+    line-height: 65px;
+    padding-left: 10px;
+  }
+  .header .logo a img {
+    max-height: 50px;
+    height: 6.54vw;
   }
   .header .util .saerch {
     width: 100%;
+    height: 65px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    display: none;
+  }
+  .header .util .saerch--item {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .header .util .saerch input[type=text] {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 36px 10px 50px;
+  }
+  .header .util .saerch .x {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  .header .util .saerch .x img {
+    height: 40px;
+  }
+  #main {
+    padding: 0;
+  }
+  #main .main_visual {
+    margin: 0 auto;
+  }
+  #main .new {
+    margin: 100px 20px;
+  }
+  #main .chart {
+    margin: 100px 20px;
+  }
+  #main .hot_artist {
+    margin: 100px 20px;
+  }
+  #main .editor {
+    margin: 100px 20px;
+  }
+  #main .mv {
+    margin: 100px 20px;
+  }
+  #main .magazine {
+    margin: 100px 20px;
+  }
+  #main .download {
+    margin: 100px auto;
+  }
+  #footer {
+    padding: 0;
+  }
+  .play_list .mini_album {
+    padding: 0 0 0 30px;
+  }
+  .play_list .sound .sound--icon {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
