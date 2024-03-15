@@ -9,15 +9,20 @@ $(function () {
   //해더 검색창
   let searchBtn = document.getElementsByClassName('mobile_saerch')[0];
   let searchBox = document.getElementsByClassName('saerch')[0];
-  let searchX = document.getElementsByClassName('x')
+  let searchX = document.getElementsByClassName('x')[0];
 
   searchBtn.addEventListener('click', () => {
     //alert();
     if(getComputedStyle(searchBox).display === 'none'){
         searchBox.style.display = 'block'
-    }else {
-      searchBox.style.display = 'none'
-    }
+    }//else {
+      //searchBox.style.display = 'none'
+    //}
+  })
+  searchX.addEventListener('click', () => {
+      if(getComputedStyle(searchBox).display === 'block'){
+        searchBox.style.display = 'none'
+      }
   })
 
 

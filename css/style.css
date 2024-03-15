@@ -1074,7 +1074,18 @@ html, body {
     position: relative;
   }
   .header .logo {
+    height: 65px;
+    border-bottom: none;
+    text-align: start;
+    border-bottom: none;
+    padding-bottom: 0;
+    line-height: 65px;
+    padding-left: 20px;
     margin: 0;
+  }
+  .header .logo a img {
+    max-height: 45px;
+    height: 6.54vw;
   }
   .header .inner .mobile_buttom {
     position: absolute;
@@ -1083,6 +1094,9 @@ html, body {
     transform: translateY(-50%);
     display: flex;
   }
+  .header .inner .mobile_saerch {
+    padding-right: 7px;
+  }
   .header .inner .mobile_saerch img {
     width: 40px;
     height: 40px;
@@ -1090,19 +1104,6 @@ html, body {
   .header .inner .mobile_menu img {
     width: 40px;
     height: 40px;
-  }
-  .header .logo {
-    height: 65px;
-    border-bottom: none;
-    text-align: start;
-    border-bottom: none;
-    padding-bottom: 0;
-    line-height: 65px;
-    padding-left: 10px;
-  }
-  .header .logo a img {
-    max-height: 50px;
-    height: 6.54vw;
   }
   .header .util .saerch {
     width: 100%;
@@ -1134,14 +1135,12 @@ html, body {
     padding: 10px 36px 10px 50px;
   }
   .header .util .saerch .x {
+    height: 30px;
     display: block;
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-  }
-  .header .util .saerch .x img {
-    height: 40px;
   }
   #main {
     padding: 0;
