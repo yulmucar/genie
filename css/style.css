@@ -337,6 +337,7 @@ html, body {
 #main .chart {
   max-width: 1670px;
   margin: 100px 75px;
+  position: relative;
   /* .chart */
 }
 #main .chart .title {
@@ -351,14 +352,41 @@ html, body {
 #main .chart .title p {
   font-size: 20px;
 }
+#main .chart .btn_wrap { /* 부모에다가 absolute를 줬어야했음 */
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+#main .chart .btn_wrap .next {
+  position: absolute;
+  right: -40px;
+}
+#main .chart .btn_wrap button {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: "CookieRun-Regular";
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
+}
 #main .chart .track {
   height: 500px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+  /*  display: inline-block; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* overflow-y: scroll; */
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 #main .chart .track .track_list {
+  max-width: 760px;
   width: 48.5%;
+  white-space: nowrap;
+  display: inline-block;
 }
 #main .chart .track .track_list .scroll {
   position: relative;
@@ -405,26 +433,6 @@ html, body {
 #main .chart .track .track_list .scroll .main--image--icon a {
   display: block;
 }
-#main .chart .track .btn_wrap { /* 부모에다가 absolute를 줬어야했음 */
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: -20px;
-  transform: translateY(-50%);
-}
-#main .chart .track .btn_wrap .next {
-  position: absolute;
-  right: -40px;
-}
-#main .chart .track .btn_wrap button {
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border-radius: 50%;
-  font-size: 20px;
-  font-family: "CookieRun-Regular";
-  box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
-}
 #main .hot_artist {
   max-width: 1670px;
   margin: 150px 75px;
@@ -447,6 +455,7 @@ html, body {
   height: 500px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   position: relative;
   /* .artist end */
 }
@@ -461,9 +470,9 @@ html, body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#main .hot_artist .artist--text {
+#main .hot_artist .artist .artist--image--text {
   max-width: 753px;
-  width: 48.5%;
+  width: 100%;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.6705882353);
   position: absolute;
@@ -471,7 +480,7 @@ html, body {
   bottom: 0;
   padding: 25px;
 }
-#main .hot_artist .artist--text p {
+#main .hot_artist .artist .artist--image--text p {
   font-size: 1.5rem;
   line-height: 1.3;
   font-weight: 700;
@@ -571,6 +580,7 @@ html, body {
 }
 #main .editor--list.on {
   display: flex;
+  flex-wrap: wrap;
 }
 #main .editor--list--item {
   max-width: 365px;
@@ -900,19 +910,19 @@ html, body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.play_list .sound--icon {
+.play_list .sound {
   display: flex;
   align-items: center;
 }
-.play_list .sound--list figure {
-  height: 25px;
-  padding: 0 30px;
+.play_list .sound--icon {
+  padding-right: 30px;
 }
-.play_list .sound--list figure img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.play_list .sound--list {
+  padding-right: 30px;
+}
+.play_list .sound--list img {
+  width: 25px;
+  height: 25px;
 }
 
 @media screen and (max-width: 1910px) {
@@ -995,6 +1005,9 @@ html, body {
   }
 }
 @media screen and (max-width: 1280px) {
+  #main .main_visual {
+    margin: 0 50px;
+  }
   #main .main_visual .text {
     left: 80px;
   }
@@ -1009,6 +1022,9 @@ html, body {
     font-size: 16px;
   }
   /*new  */
+  #main .new {
+    margin: 100px 50px;
+  }
   #main .new .new_album .album {
     width: 22.18%;
   }
@@ -1020,18 +1036,35 @@ html, body {
     height: 14.93vw;
   }
   /* track */
+  #main .chart {
+    margin: 100px 50px;
+  }
   #main .chart .track .track_list .scroll .main--image--icon {
     display: none;
   }
   /* hot_artist */
+  #main .hot_artist {
+    margin: 100px 50px;
+  }
+  #main .hot_artist .artist .artist--image--text p {
+    font-size: 1.3rem;
+  }
   #main .hot_artist .artist .track_list .scroll .main--image--icon {
     display: none;
   }
+  /* editor */
   #main .editor {
-    margin: 100px 75px;
+    margin: 100px 50px;
   }
+  #main .editor--list--item {
+    width: 31.25%;
+  }
+  #main .editor--list--item:last-child {
+    display: none;
+  }
+  /* mv */
   #main .mv {
-    margin: 100px 75px;
+    margin: 100px 50px;
   }
   #main .mv .swiper .swiper-slide .mv--item .mv--text h6 {
     font-size: 23px;
@@ -1039,11 +1072,19 @@ html, body {
   #main .mv .swiper .swiper-slide .mv--item .mv--text P {
     font-size: 16px;
   }
+  /* magazine */
+  #main .magazine {
+    margin: 100px 50px;
+  }
   #main .magazine .list {
     height: 400px;
   }
   #main .magazine .list--text h6 {
     font-size: 23px;
+  }
+  /* download */
+  #main .download {
+    margin: 100px 55px;
   }
   #main .download .gin--text figure {
     margin-bottom: 10px;
@@ -1157,6 +1198,9 @@ html, body {
   #main .hot_artist {
     margin: 100px 20px;
   }
+  #main .hot_artist .artist .artist--image--text p {
+    font-size: 1.8rem;
+  }
   #main .editor {
     margin: 100px 20px;
   }
@@ -1169,6 +1213,10 @@ html, body {
   #main .download {
     margin: 100px auto;
   }
+  #main .download .gin .bg figure {
+    /* 400 */
+    height: 39.06vw;
+  }
   #footer {
     padding: 0;
   }
@@ -1177,5 +1225,52 @@ html, body {
   }
   .play_list .sound .sound--icon {
     display: none;
+  }
+}
+/* 767 */
+@media screen and (max-width: 767px) {
+  #main .chart .track .track_list {
+    width: 100%;
+  }
+  #main .hot_artist .artist {
+    height: 1000px;
+  }
+  #main .hot_artist .artist .artist--image {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #main .hot_artist .artist--text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #main .hot_artist .artist .track_list {
+    width: 100%;
+  }
+  #main .editor--list {
+    height: 900px;
+  }
+  #main .editor--list--item:last-child {
+    display: block;
+  }
+  #main .editor--list--item {
+    width: 48%;
+  }
+  #main .editor--list--item figure {
+    /* 300 */
+    height: 39.11vw;
+  }
+  #main .magazine .list {
+    height: 500px;
+  }
+  #main .magazine .list--item {
+    width: 48%;
+  }
+  #main .magazine .list--item:last-child {
+    display: none;
+  }
+  #main .magazine .list--item figure {
+    max-height: 350px;
+    height: 45.63vw;
   }
 }/*# sourceMappingURL=style.css.map */
