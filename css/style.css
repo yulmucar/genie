@@ -44,6 +44,12 @@
   font-weight: normal;
   font-style: normal;
 }
+.racing-sans one-regular {
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 *,
 ::before,
 ::after {
@@ -250,8 +256,9 @@ html, body {
 }
 #main .main_visual .text P {
   line-height: 1.5;
-  font-size: 17PX;
+  font-size: 17px;
   font-weight: 500;
+  display: block;
 }
 #main .main_visual .main_icon {
   display: flex;
@@ -490,6 +497,7 @@ html, body {
 }
 #main .hot_artist .artist .track_list .scroll {
   position: relative;
+  overflow-x: auto;
 }
 #main .hot_artist .artist .track_list .scroll--list {
   display: flex;
@@ -580,7 +588,7 @@ html, body {
 }
 #main .editor--list.on {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 #main .editor--list--item {
   max-width: 365px;
@@ -677,6 +685,7 @@ html, body {
 }
 #main .mv .swiper .swiper-button-next {
   right: -20px;
+  z-index: 9;
 }
 #main .mv .swiper .swiper-button-prev {
   left: -20px;
@@ -858,7 +867,7 @@ html, body {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -910,7 +919,7 @@ html, body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.play_list .sound {
+.play_list .sound--icon {
   display: flex;
   align-items: center;
 }
@@ -937,7 +946,8 @@ html, body {
 }
 @media screen and (max-width: 1440px) {
   #main .new .new_album {
-    height: 300px;
+    max-height: 500px;
+    height: 34.72vw;
   }
   #main .new .new_album .album--image {
     max-height: 283px;
@@ -973,7 +983,7 @@ html, body {
   }
   /* mv */
   #main .mv .swiper .swiper-slide .mv--item figure {
-    height: 14vw;
+    height: 15vw;
   }
   #main .mv .swiper .swiper-slide .mv--item .mv--text h6 {
     font-size: 25px;
@@ -1006,7 +1016,7 @@ html, body {
 }
 @media screen and (max-width: 1280px) {
   #main .main_visual {
-    margin: 0 50px;
+    margin: 0;
   }
   #main .main_visual .text {
     left: 80px;
@@ -1026,14 +1036,14 @@ html, body {
     margin: 100px 50px;
   }
   #main .new .new_album .album {
-    width: 22.18%;
+    width: 24.1%;
   }
   #main .new .new_album .album:last-child {
     display: none;
   }
   #main .new .new_album .album--image {
-    max-height: 283px;
-    height: 14.93vw;
+    max-height: 300px;
+    height: 17.5vw;
   }
   /* track */
   #main .chart {
@@ -1082,9 +1092,8 @@ html, body {
   #main .magazine .list--text h6 {
     font-size: 23px;
   }
-  /* download */
   #main .download {
-    margin: 100px 55px;
+    margin: 100px 50px;
   }
   #main .download .gin--text figure {
     margin-bottom: 10px;
@@ -1110,17 +1119,17 @@ html, body {
   }
   .header {
     width: 100%;
-    height: 65px;
+    height: 100px;
     border-right: none;
     position: relative;
   }
   .header .logo {
-    height: 65px;
+    height: 100px;
     border-bottom: none;
     text-align: start;
     border-bottom: none;
     padding-bottom: 0;
-    line-height: 65px;
+    line-height: 100px;
     padding-left: 20px;
     margin: 0;
   }
@@ -1136,11 +1145,11 @@ html, body {
     display: flex;
   }
   .header .inner .mobile_saerch {
-    padding-right: 7px;
+    padding-right: 10px;
   }
   .header .inner .mobile_saerch img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   .header .inner .mobile_menu img {
     width: 40px;
@@ -1148,7 +1157,7 @@ html, body {
   }
   .header .util .saerch {
     width: 100%;
-    height: 65px;
+    height: 100px;
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -1170,7 +1179,7 @@ html, body {
   }
   .header .util .saerch input[type=text] {
     width: 100%;
-    height: 55px;
+    height: 70px;
     border: none;
     border-radius: 10px;
     padding: 10px 36px 10px 50px;
@@ -1183,30 +1192,115 @@ html, body {
     right: 20px;
     transform: translateY(-50%);
   }
+  .header .mobile_nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    text-align: center;
+    padding: 50px;
+    display: none;
+  }
+  .header .mobile_nav .mobile_close {
+    text-align: end;
+  }
+  .header .mobile_nav .login {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin: 20px 0;
+  }
+  .header .mobile_nav .login img {
+    width: 60px;
+  }
+  .header .mobile_nav .login p {
+    font-size: 30px;
+    padding-left: 20px;
+  }
+  .header .mobile_nav .user {
+    width: 100%;
+    height: 80px;
+    background-color: #0095ff;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  .header .mobile_nav .gnb {
+    margin: 20px;
+  }
+  .header .mobile_nav .gnb .depth01 {
+    display: flex;
+    padding: 20px 0;
+  }
+  .header .mobile_nav .gnb .depth01 a {
+    padding-right: 20px;
+  }
+  .header .mobile_nav .gnb .depth01 img {
+    width: 30px;
+    height: 30px;
+  }
+  .header .mobile_nav .gnb .depth01 p {
+    font-size: 30px;
+  }
+  /* #main */
   #main {
     padding: 0;
   }
   #main .main_visual {
     margin: 0 auto;
   }
+  #main .main_visual .visual a figure {
+    max-height: 600px;
+    height: 58.59vw;
+  }
+  #main .main_visual .text h3 {
+    font-size: 45px;
+  }
+  #main .main_visual .text p {
+    font-size: 22px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+  /* new */
   #main .new {
     margin: 100px 20px;
   }
+  #main .new .new_album .album {
+    /* 250 */
+    width: 24.41%;
+  }
+  #main .new .new_album .album--image {
+    height: 24.41vw;
+  }
+  /* chart */
   #main .chart {
     margin: 100px 20px;
   }
+  /* hot_artist */
   #main .hot_artist {
     margin: 100px 20px;
   }
   #main .hot_artist .artist .artist--image--text p {
     font-size: 1.8rem;
   }
+  /* editor */
   #main .editor {
     margin: 100px 20px;
   }
+  /* mv */
   #main .mv {
     margin: 100px 20px;
   }
+  #main .mv .swiper .swiper-slide .mv--item figure {
+    height: 30vw;
+  }
+  /* magazine */
   #main .magazine {
     margin: 100px 20px;
   }
@@ -1226,9 +1320,38 @@ html, body {
   .play_list .sound .sound--icon {
     display: none;
   }
+  #footer {
+    padding: 0;
+  }
+  .play_list .mini_album {
+    padding: 0 0 0 30px;
+  }
+  .play_list .sound .sound--icon {
+    display: none;
+  }
 }
 /* 767 */
 @media screen and (max-width: 767px) {
+  #main .main_visual .text {
+    /* bottom: 50%; */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  #main .main_visual .text p {
+    font-size: 17px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    /* display: none; */
+  }
+  #main .main_visual .main_icon {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #main .new .new_album .album--image {
+    height: 23.5vw;
+  }
   #main .chart .track .track_list {
     width: 100%;
   }
@@ -1250,6 +1373,9 @@ html, body {
   #main .editor--list {
     height: 900px;
   }
+  #main .editor--list.on {
+    flex-wrap: wrap;
+  }
   #main .editor--list--item:last-child {
     display: block;
   }
@@ -1259,6 +1385,9 @@ html, body {
   #main .editor--list--item figure {
     /* 300 */
     height: 39.11vw;
+  }
+  #main .mv .swiper .swiper-slide .mv--item figure {
+    height: 50vw;
   }
   #main .magazine .list {
     height: 500px;
@@ -1272,5 +1401,56 @@ html, body {
   #main .magazine .list--item figure {
     max-height: 350px;
     height: 45.63vw;
+  }
+  /* footer */
+  #footer {
+    height: 350px;
+  }
+  #footer .footer_inner {
+    margin: 20px;
+  }
+  #footer .footer_inner .note {
+    display: none;
+  }
+  #footer .footer_inner .info ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #footer .footer_inner .info ul li {
+    margin-bottom: 10px;
+  }
+  #footer .footer_inner .company_info ul {
+    justify-content: center;
+  }
+  #footer .footer_inner .company_info ul li {
+    font-size: 15px;
+  }
+  #footer .copyright {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    height: 60px;
+  }
+  .header .logo {
+    height: 60px;
+    line-height: 60px;
+  }
+  .header .inner .mobile_saerch img {
+    width: 40px;
+    height: 40px;
+  }
+  .header .inner .mobile_menu img {
+    width: 35px;
+    height: 35px;
+  }
+  #main .main_visual .text h3 {
+    bottom: 40%;
+    transform: translateY(-40%);
+  }
+  #main .main_visual .text p {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
