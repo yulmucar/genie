@@ -13,24 +13,36 @@ $(function () {
 
   searchBtn.addEventListener('click', () => {
     //alert();
-    if(getComputedStyle(searchBox).display === 'none'){
-        searchBox.style.display = 'block'
+    if (getComputedStyle(searchBox).display === 'none') {
+      searchBox.style.display = 'block'
     }//else {
-      //searchBox.style.display = 'none'
+    //searchBox.style.display = 'none'
     //}
   })
   searchX.addEventListener('click', () => {
-      if(getComputedStyle(searchBox).display === 'block'){
-        searchBox.style.display = 'none'
-      }
+    if (getComputedStyle(searchBox).display === 'block') {
+      searchBox.style.display = 'none'
+    }
   })
 
+  //모바일메뉴
+  
+  let mobileBtn = document.getElementsByClassName ('mobile_menu') [0];
+  let mobileMenu = document.getElementsByClassName ('mobile_nav') [0];
+
+  mobileBtn.onclick = function () {
+      mobileMenu.style.display = 'block'
+  }
+
+  document.getElementsByClassName ('mobile_close')[0].onclick = function(){
+      mobileMenu.style.display = 'none'
+  }
 
   //에디터탭메뉴
   let editorMenu = $('.editor .editor_tab li');
   let editorList = $('.editor .editor--list');
 
-  editorMenu.click(function (){
+  editorMenu.click(function () {
     editorMenu.removeClass('on');
     $(this).addClass('on');
 
@@ -41,8 +53,8 @@ $(function () {
   //뮤비
   let mvMenu = $('.mv .title_tab a');
   let mvList = $('.mv .mv-list');
-  
-  mvMenu.click(function (){
+
+  mvMenu.click(function () {
     mvMenu.removeClass('on');
     $(this).addClass('on');
 
@@ -54,18 +66,28 @@ $(function () {
 
   //슬라이드
   var swiper = new Swiper(".mv-list", {
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 1,
+    spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    breakpoints: {
 
-  });
+      767: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 35,
+      },
+      1280: {
+        slidesPerView: 3,
+        spaceBetween: 35,
+      },
+    },
+  });s
   document.querySelector('#ex-in').addEventListener('input', e => {
     document.querySelector('#ex-out').innerHTML = e.target.value;
   });

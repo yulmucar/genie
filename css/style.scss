@@ -572,8 +572,7 @@ html,body {
             display: none;
             gap: 1rem;
             &.on {
-                display: flex;
-                /* flex-wrap: wrap; */
+                display: flex;                
             }
             &--item {
                 max-width: 365px;
@@ -1090,6 +1089,10 @@ html,body {
     #footer .footer_inner .info {
         font-size: 14px;
     }
+    #footer .footer_inner .info ul {
+        flex-wrap: wrap;
+    }
+
 }
 
 /* 테블릿 */
@@ -1255,6 +1258,19 @@ html,body {
         -webkit-line-clamp: 5;
         overflow: hidden;
     }
+    #main .main_visual .m_visual {
+        margin: 0 auto;
+    }
+    #main .main_visual .m_visual a figure {
+        max-height: 600px;
+        height: 58.59vw;
+    }
+    #main .main_visual .m_visual a figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
     /* new */
     #main .new {
         margin: 100px 20px;
@@ -1323,12 +1339,15 @@ html,body {
 
 /* 767 */
 @media screen and (max-width: 767px) {
+
     #main .main_visual .text {
         /* bottom: 50%; */
         left: 50%;
         transform: translateX(-50%);
-        text-align: center;
-        
+        text-align: center;        
+    }
+    #main .main_visual .text h3 {
+        font-size: 50px;
     }
     #main .main_visual .text p {
         font-size: 17px;
@@ -1336,6 +1355,10 @@ html,body {
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 5;
         /* display: none; */
+    }
+    #main .main_visual .m_visual a figure {
+        max-height: 600px;
+        height: 78.22vw;
     }
     #main .main_visual .main_icon {
         
@@ -1366,8 +1389,6 @@ html,body {
     }
     #main .editor--list {
         height: 900px;
-    }
-    #main .editor--list.on {
         flex-wrap: wrap;
     }
     #main .editor--list--item:last-child {
@@ -1444,11 +1465,41 @@ html,body {
         width: 35px;
         height: 35px;
     }
+    /* main_visual */
+    #main .main_visual .visual a figure {
+        height: 100vw;
+    }
     #main .main_visual .text h3 {
         bottom: 40%;
         transform: translateY(-40%);
     }
     #main .main_visual .text p {
         display: none;
+    }
+    #main .magazine .list {
+        height: 400px;
+    }
+    #main .download {
+        margin: 100px 0 0;
+    }
+    #main .download .gin .bg figure {
+        height: 52.08vw;
+    }
+    #main .download .gin--text figure {
+        margin-bottom: 0;
+        height: 50px;
+    }
+    #main .download .gin--text figure img {
+        width: 90px;
+        height: 40px;
+    }
+    
+    #main .download .gin--text h3 {
+        font-size: 30px;
+    }
+    #main .download .gin--text--p p {
+        width: 110px;
+        height: 40px;
+        line-height: 40px;
     }
 }
