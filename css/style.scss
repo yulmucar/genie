@@ -1361,13 +1361,23 @@ html,body {
         height: 78.22vw;
     }
     #main .main_visual .main_icon {
-        
         left: 50%;
         transform: translateX( -50%);
     }
-
+    #main .new {
+        margin: 100px 20px 200px;
+    }
+    #main .new .new_album .album {
+        width: 32.29%;
+    }
+    #main .new .new_album .album:nth-child(4) {
+        display: none;
+    }
     #main .new .new_album .album--image {
-        height: 23.5vw;
+        height: 31.29vw;
+    }
+    #main .new .new_album .album--image .normal {
+        display: none;
     }
     #main .chart .track .track_list {
         width: 100%;
@@ -1466,15 +1476,51 @@ html,body {
         height: 35px;
     }
     /* main_visual */
-    #main .main_visual .visual a figure {
-        height: 100vw;
+    
+    #main .main_visual .m_visual a figure {
+        max-height: 650px;
+        height: 84.74vw;
     }
     #main .main_visual .text h3 {
-        bottom: 40%;
-        transform: translateY(-40%);
+        bottom: 60%;
+        transform: translateY(-60%);
     }
     #main .main_visual .text p {
         display: none;
+    }
+    #main .main_visual .main_icon {
+        bottom: 25%;
+    }
+    #main .new .new_album .album {
+        width: 48.5%;
+    }
+    #main .new .new_album .album:nth-child(3) {
+        display: none;
+    }
+    #main .new .new_album .album--image {
+        height: 44.79vw;
+    }
+    #main .hot_artist .artist {
+        height: 800px;
+    }
+    #main .hot_artist .artist .artist--image--text {
+        height: 80px;
+    }
+    #main .hot_artist .artist .artist--image--text p {
+        font-size:1.2rem;
+    }
+    #main .hot_artist .artist .artist--image--text p br {
+        display: none;
+    }
+    #main .editor--list {
+        height: 700px;
+    }
+    #main .editor .editor_tab li {
+        font-size: 18px;
+    }
+    #main .editor--list--item {
+        width: 47%;
+        height: 44.79vw;
     }
     #main .magazine .list {
         height: 400px;
