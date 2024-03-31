@@ -1482,8 +1482,8 @@ html,body {
         height: 84.74vw;
     }
     #main .main_visual .text h3 {
-        bottom: 60%;
-        transform: translateY(-60%);
+        bottom: 70%;
+        transform: translateY(-70%);
     }
     #main .main_visual .text p {
         display: none;
@@ -1547,5 +1547,226 @@ html,body {
         width: 110px;
         height: 40px;
         line-height: 40px;
+    }
+    .play_list .mini_album--icon {
+        display: none;
+    }
+    .play_list .play_buttom figure {
+        display: none;
+    }
+    .play_list .play_buttom figure:nth-child(3) {
+        display: block;
+    }
+    .play_list {
+        height: 50px;
+    }
+    .play_list .sound {
+        display: none;
+    }
+    .play_list .mini_album a {
+        width: 40px;
+    }
+    .play_list .mini_album a figure {
+        height: 40px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .header .inner .mobile_saerch img {
+        width: 30px;
+        height: 30px;
+    }
+    .header .inner .mobile_menu img {
+        width: 30px;
+        height: 30px;
+    }
+    #main .new {
+        margin: 100px 20px 250px;
+    }
+    #main .new .title p {
+        font-size: 15px;
+    }
+    #main .main_visual .text h3 {
+        font-size: 35px;
+    }
+    #main .main_visual .main_icon a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    #main .new .title h4 {
+        font-size: 1.2rem;
+    }
+    #main .chart .title h4 {
+        font-size: 1.3rem;
+    }
+    #main .chart .title p {
+        font-size: 16px;
+    }
+    #main .chart .track {
+        height: 400px;
+    }
+    #main .chart .track .track_list .scroll--list {
+        height: 80px;
+    }
+    #main .chart .track .track_list .scroll--list--image {
+        width: 60px;
+        height: 60px;
+    }
+    #main .chart .track .track_list .scroll .main--image--text span {
+        font-size: 17px;
+    }
+    #main .chart .track .track_list .scroll .main--image--text p {
+        font-size: 15px;
+    }
+    #main .hot_artist .artist {
+        height: 700px;
+    }
+    #main .hot_artist .title h4 {
+        font-size: 1.3rem;
+    }
+    #main .hot_artist .title p {
+        font-size: 15px;
+    }
+    #main .hot_artist .artist .artist--image {
+        height: 83.33vw;
+    }
+    #main .hot_artist .artist .artist--image--text {
+        height: 70px;
+    }
+    #main .hot_artist .artist .artist--image--text p {
+        font-size: 1rem;
+        line-height: 1;
+    }
+    #main .hot_artist .artist .track_list .scroll--list {
+        height: 80px;
+    }
+    #main .hot_artist .artist .track_list .scroll--list--image {
+        width: 60px;
+        height: 60px;
+    }
+    #main .hot_artist .artist .track_list .scroll .main--image--text span {
+        font-size: 17px;
+    }
+    #main .hot_artist .artist .track_list .scroll .main--image--text p{
+        font-size: 15px;
+    }
+    #main .editor .title h4 {
+        font-size: 1.3rem;
+        padding-bottom: 30px;
+    }
+    #main .editor .title p {
+        font-size: 15px;
+    }
+    #main .editor .editor_tab {
+        gap: 0.5rem;
+        margin-bottom: 20px;
+    }
+    #main .editor .editor_tab li.on {
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        border: 1px solid #0095ff;
+    }
+    #main .editor .editor_tab li {
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        border: 1px solid #6c6c6c;
+    }
+    #main .editor--list {
+        height: 550px;
+    }
+    #main .editor--list--text {
+        height: 110px;
+    }
+    #main .editor--list--text h6 {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    #main .editor--list--text p {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    #main .mv .title h4 {
+        font-size: 1.3rem;
+    }
+    #main .mv .title .title_tab {
+        padding-top: 3px;
+        gap: 10px;
+        font-size: 15px;
+    }
+    #main .mv .title .title_more p {
+        font-size: 15px;
+    }
+    #main .mv .swiper .swiper-slide .mv--item .mv--text h6 {
+        font-size: 18px;
+    }
+    #main .mv .swiper .swiper-slide .mv--item .mv--text P {
+        font-size: 15px;
+    }
+    #main .mv .swiper .swiper-button-next, #main .mv .swiper .swiper-button-prev {
+        display: none;
+    }
+
+    #main .magazine .title h4 {
+        font-size: 1.3rem;
+    }
+    #main .magazine .title p {
+        font-size: 15px;
+    }
+    #main .magazine .list {
+        height: 300px;
+    }
+    #main .magazine .list--text {
+        padding: 0;
+    }
+    #main .magazine .list--text h6 {
+        font-size: 18px;
+    }
+    #main .magazine .list--text p {
+        font-size: 15px;
+    }
+    #main .download .gin--text {
+        padding: 10px;
+    }
+    #main .download .gin--text figure {
+        height: 35px;
+        margin-bottom: 10px;
+    }
+    #main .download .gin--text figure img {
+        width: 85px;
+        height: 35px;        
+    }
+    #main .download .gin--text h3 {
+        padding: 10px;
+    }
+    #main .download .gin--text--p {
+        gap:10px;
+        padding: 10px 0 0;
+    }    
+    #main .download .gin--text--p p {
+        width: 100px;
+        font-size: 15px;
+    }
+    #main .download .gin .bg figure {
+        height: 55.55vw;
+    }
+    #footer .footer_inner .info {
+        font-size: 13px;
+    }
+    #footer .footer_inner .company_info ul li {
+        font-size: 13px;
+    }
+    #footer .footer_inner .copyright {
+        font-size: 13px;
+    }
+    .play_list .play_buttom figure {
+        height: 20px;
+    }
+    .play_list .mini_album--text h5 {
+        font-size: 16px;
+    }
+    .play_list .mini_album--text p {
+        font-size: 14px;
     }
 }
