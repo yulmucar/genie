@@ -568,8 +568,10 @@ html, body {
 }
 #main .editor .editor_tab {
   display: flex;
+  /* flex-wrap: nowrap; */
   gap: 1rem;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 #main .editor .editor_tab li {
   width: 130px;
@@ -578,13 +580,13 @@ html, body {
   text-align: center;
   line-height: 40px;
   border-radius: 50px;
-  border: 2px solid #6c6c6c;
+  border: 1px solid #6c6c6c;
   font-size: 20px;
 }
 #main .editor .editor_tab li.on {
   width: 130px;
   height: 42px;
-  border: 2px solid #0095ff;
+  border: 1px solid #0095ff;
   color: #0095ff;
 }
 #main .editor--list {
@@ -1025,6 +1027,11 @@ html, body {
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 1300px) {
+  .play_list .mini_album {
+    padding: 0 10px 0 30px;
+  }
+}
 @media screen and (max-width: 1280px) {
   #main .main_visual {
     margin: 0;
@@ -1118,6 +1125,11 @@ html, body {
   }
   #footer .footer_inner .info ul {
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .play_list .sound--icon {
+    display: none;
   }
 }
 /* 테블릿 */
@@ -1344,14 +1356,12 @@ html, body {
   .play_list .mini_album {
     padding: 0 0 0 30px;
   }
+  .play_list .sound--list {
+    height: 80px;
+    line-height: 80px;
+  }
   .play_list .sound .sound--icon {
     display: none;
-  }
-  #footer {
-    padding: 0;
-  }
-  .play_list .mini_album {
-    padding: 0 0 0 30px;
   }
   /* 767 */
   /* 600 */
@@ -1501,6 +1511,17 @@ html, body {
   .play_list .mini_album a figure {
     height: 40px;
   }
+  #main .editor .editor_tab li {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 490px) {
+  #main .editor--list--item {
+    width: 47.5%;
+  }
+  #main .editor--list--item figure {
+    height: 34vw;
+  }
 }
 @media screen and (max-width: 1024px) and (max-width: 480px) {
   .header {
@@ -1559,6 +1580,10 @@ html, body {
   }
   #main .editor .editor_tab li {
     font-size: 18px;
+    border: 1px solid #6c6c6c;
+  }
+  #main .editor .editor_tab li.on {
+    border: 1px solid #0095ff;
   }
   #main .editor--list--item {
     width: 47%;
@@ -1612,8 +1637,8 @@ html, body {
     height: 60px;
   }
   .play_list .sound--list {
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
   }
   .play_list .sound--list img {
     width: 20px;
@@ -1624,6 +1649,40 @@ html, body {
   }
   .play_list .mini_album a figure {
     height: 40px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 460px) {
+  #main .main_visual .text h3 {
+    font-size: 40px;
+  }
+  #main .editor .editor_tab li.on {
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    border: 1px solid #0095ff;
+  }
+  #main .editor .editor_tab li {
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    border: 1px solid #6c6c6c;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 440px) {
+  #main .editor .editor_tab {
+    gap: 10px;
+  }
+  #main .editor .editor_tab li.on {
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    border: 1px solid #0095ff;
+  }
+  #main .editor .editor_tab li {
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    border: 1px solid #6c6c6c;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 360px) {
@@ -1717,13 +1776,18 @@ html, body {
     gap: 0.5rem;
     margin-bottom: 20px;
   }
+  /*     #main .editor .editor_tab {
+          overflow-X: auto;
+      } */
   #main .editor .editor_tab li.on {
+    width: 150px;
     height: 35px;
     line-height: 35px;
     font-size: 14px;
     border: 1px solid #0095ff;
   }
   #main .editor .editor_tab li {
+    width: 150px;
     height: 35px;
     line-height: 35px;
     font-size: 14px;

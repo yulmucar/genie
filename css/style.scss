@@ -553,8 +553,10 @@ html,body {
         }/* .title end */
         .editor_tab {
             display: flex;
+            /* flex-wrap: nowrap; */
             gap: 1rem;
             margin-bottom: 30px;
+            overflow: hidden;
             li {
                 width: 130px;
                 height: 42px;
@@ -562,12 +564,12 @@ html,body {
                 text-align: center;
                 line-height: 40px;
                 border-radius: 50px;
-                border: 2px solid #6c6c6c;
+                border: 1px solid #6c6c6c;
                 font-size: 20px;
                 &.on {
                     width: 130px;
                     height: 42px;
-                    border: 2px solid #0095ff;
+                    border: 1px solid #0095ff;
                     color: #0095ff;
                 }
             }           
@@ -1013,7 +1015,11 @@ html,body {
     #footer .footer_inner .company_info ul {flex-wrap: wrap;}
 
 }
-
+@media screen and (max-width: 1300px) {
+    .play_list .mini_album {
+        padding: 0 10px 0 30px;
+    }
+}
 
 @media screen and (max-width: 1280px) {
     #main .main_visual {
@@ -1099,6 +1105,11 @@ html,body {
         flex-wrap: wrap;
     }
 
+}
+@media screen and (max-width: 1110px) {
+    .play_list .sound--icon {
+        display: none;
+    }
 }
 
 /* 테블릿 */
@@ -1325,18 +1336,16 @@ html,body {
     #footer {
         padding: 0;
     }
+
     .play_list .mini_album {
         padding: 0 0 0 30px ;
+    }
+    .play_list .sound--list {
+        height: 80px;
+        line-height: 80px;
     }
     .play_list .sound .sound--icon {
         display: none;
-    }
-
-    #footer {
-        padding: 0;
-    }
-    .play_list .mini_album {
-        padding: 0 0 0 30px ;
     }
 
 /* 767 */
@@ -1491,6 +1500,17 @@ html,body {
     .play_list .mini_album a figure {
         height: 40px;
     }
+    #main .editor .editor_tab li {
+        font-size: 18px;
+    }
+} 
+@media screen and (max-width: 490px) {
+    #main .editor--list--item {
+        width: 47.5%;
+    }
+    #main .editor--list--item figure {
+        height: 34vw;
+    }
 } 
 /* 480 */
 @media screen and (max-width: 480px)  {
@@ -1551,11 +1571,16 @@ html,body {
     }
     #main .editor .editor_tab li {
         font-size: 18px;
+        border: 1px solid #6c6c6c;
+    }
+    #main .editor .editor_tab li.on {
+        border: 1px solid #0095ff;
     }
     #main .editor--list--item {
         width: 47%;
         height: 44.79vw;
     }
+    
     #main .magazine .list {
         height: 400px;
     }
@@ -1605,8 +1630,8 @@ html,body {
         height: 60px;
     }
     .play_list .sound--list {
-        height: 60px;
-        line-height: 60px;
+        height: 50px;
+        line-height: 50px;
     }
     .play_list .sound--list img {
         width: 20px;
@@ -1617,6 +1642,41 @@ html,body {
     }
     .play_list .mini_album a figure {
         height: 40px;
+    }
+}
+@media screen and (max-width: 460px) {
+    #main .main_visual .text h3 {
+        font-size: 40px;
+    }
+    #main .editor .editor_tab li.on {
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        border: 1px solid #0095ff;
+    }
+    #main .editor .editor_tab li {
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        border: 1px solid #6c6c6c;
+    }
+}
+@media screen and (max-width: 440px) {
+    
+    #main .editor .editor_tab {
+     gap:10px;   
+    }
+    #main .editor .editor_tab li.on {
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        border: 1px solid #0095ff;
+    }
+    #main .editor .editor_tab li {
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        border: 1px solid #6c6c6c;
     }
 }
 @media screen and (max-width: 360px) {
@@ -1710,13 +1770,18 @@ html,body {
         gap: 0.5rem;
         margin-bottom: 20px;
     }
+/*     #main .editor .editor_tab {
+        overflow-X: auto;
+    } */
     #main .editor .editor_tab li.on {
+        width: 150px;
         height: 35px;
         line-height: 35px;
         font-size: 14px;
         border: 1px solid #0095ff;
     }
     #main .editor .editor_tab li {
+        width: 150px;
         height: 35px;
         line-height: 35px;
         font-size: 14px;
