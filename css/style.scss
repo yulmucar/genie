@@ -372,6 +372,8 @@ html,body {
             }
         }             
         .track {
+            /* width: 1280px; */
+            width: 2800px;
             height: 500px;
            /*  display: inline-block; */
             /* display: flex; */
@@ -385,6 +387,12 @@ html,body {
                 width: 48.50%;
                 white-space: nowrap;
                 display: inline-block;
+                &.on {
+                    max-width: 760px;                                  
+                    width: 48.50%;
+                    transition: 5s;
+                    transform: translateX(-737px);
+                }
                 .scroll {                
                 position: relative;           
                 &--list {                      

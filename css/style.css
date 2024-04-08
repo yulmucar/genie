@@ -389,6 +389,8 @@ html, body {
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
 }
 #main .chart .track {
+  /* width: 1280px; */
+  width: 2800px;
   height: 500px;
   /*  display: inline-block; */
   /* display: flex; */
@@ -402,6 +404,12 @@ html, body {
   width: 48.5%;
   white-space: nowrap;
   display: inline-block;
+}
+#main .chart .track .track_list.on {
+  max-width: 760px;
+  width: 48.5%;
+  transition: 5s;
+  transform: translateX(-737px);
 }
 #main .chart .track .track_list .scroll {
   position: relative;

@@ -1,8 +1,8 @@
 $(function () {
   //링크방지
-  $('a').click(function (e) {
+  /* $('a').click(function (e) {
     e.preventDefault();
-  });
+  }); */
 
   //🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚스크립트시작
 
@@ -26,17 +26,56 @@ $(function () {
   })
 
   //모바일메뉴
-  
-  let mobileBtn = document.getElementsByClassName ('mobile_menu') [0];
-  let mobileMenu = document.getElementsByClassName ('mobile_nav') [0];
+
+  let mobileBtn = document.getElementsByClassName('mobile_menu')[0];
+  let mobileMenu = document.getElementsByClassName('mobile_nav')[0];
 
   mobileBtn.onclick = function () {
-      mobileMenu.style.display = 'block'
+    mobileMenu.style.display = 'block'
   }
 
-  document.getElementsByClassName ('mobile_close')[0].onclick = function(){
-      mobileMenu.style.display = 'none'
+  document.getElementsByClassName('mobile_close')[0].onclick = function () {
+    mobileMenu.style.display = 'none'
   }
+
+  //페이지
+  let list = document.querySelectorAll('chart')[0];
+  let itemImage = list.getElementsByClassName('track')[0];
+  let prevBtn = list.getElementsByClassName('prev')[0];
+  let nextBtn = list.getElementsByClassName('next')[0];
+  
+  // let image1 = 'track_list';
+  let image1 = list.getElementsByClassName('track_list')[0];
+  let image2 = list.getElementsByClassName('track_list')[1];
+  let image3 = list.getElementsByClassName('track_list')[2];
+  let image4 = list.getElementsByClassName('track_list')[3];
+
+  let imageWrap = [image1, image2, image3, image4];
+
+  let i = 0;
+  
+  nextBtn.addEventListener('click', () => {
+    i++;
+    if (i >= imageWrap.length) {
+      i = 0;
+    }
+    console.log(imageWrap[i])
+    imageWrap[i].classList.add('on');
+  })//nextBtn.click end
+
+  prevBtn.addEventListener('click', () => {
+    i--;
+    if (i < 0) {
+      //i < 0;
+      //i = 2;
+      i = imageWrap.length - 1;
+    }
+
+    /* itemImage.src = imageWrap[i]; */
+    imageWrap[i].classList.add('on');
+
+  }); //prevBtn.click end
+
 
   //에디터탭메뉴
   let editorMenu = $('.editor .editor_tab li');
@@ -86,8 +125,5 @@ $(function () {
         spaceBetween: 35,
       },
     },
-  });s
-  document.querySelector('#ex-in').addEventListener('input', e => {
-    document.querySelector('#ex-out').innerHTML = e.target.value;
-  });
+  }); 
 });
