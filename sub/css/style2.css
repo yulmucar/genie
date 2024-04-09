@@ -64,24 +64,30 @@ html, body {
   /* position: relative; */
 }
 
-.chart {
+#main {
+  max-width: 1920px;
+  padding-left: 250px;
+  margin: 0 auto;
+  /* .chart */
+}
+#main .chart {
   max-width: 1670px;
   margin: 100px 75px;
   position: relative;
 }
-.chart .title {
+#main .chart .title {
   display: flex;
   justify-content: space-between;
 }
-.chart .title h4 {
+#main .chart .title h4 {
   font-size: 50px;
   font-weight: 600;
   padding-bottom: 20px;
 }
-.chart .title p {
+#main .chart .title p {
   font-size: 20px;
 }
-.chart .btn_wrap { /* 부모에다가 absolute를 줬어야했음 */
+#main .chart .btn_wrap { /* 부모에다가 absolute를 줬어야했음 */
   width: 100%;
   position: absolute;
   top: 50%;
@@ -89,11 +95,11 @@ html, body {
   transform: translateY(-50%);
   z-index: 99;
 }
-.chart .btn_wrap .next {
+#main .chart .btn_wrap .next {
   position: absolute;
   right: -40px;
 }
-.chart .btn_wrap button {
+#main .chart .btn_wrap button {
   width: 40px;
   height: 40px;
   background-color: #fff;
@@ -102,45 +108,45 @@ html, body {
   font-family: "CookieRun-Regular";
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
 }
-.chart .track {
+#main .chart .track {
   height: 500px;
 }
-.chart .track .swiper-slide {
-  max-width: 700px;
-  width: 49.61%;
+#main .chart .track .swiper-slide {
+  /* max-width: 700px;                                  
+  width: 49.61%; */
   position: relative;
 }
-.chart .track .swiper-slide .scroll--list {
+#main .chart .track .swiper-slide .scroll--list {
   height: 100px;
   display: flex;
   align-items: center;
   margin-right: 30px;
   border-bottom: 1px solid #bebebe;
 }
-.chart .track .swiper-slide .scroll--list--image {
+#main .chart .track .swiper-slide .scroll--list--image {
   width: 78px;
   height: 78px;
 }
-.chart .track .swiper-slide .scroll--list--image img {
+#main .chart .track .swiper-slide .scroll--list--image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.chart .track .swiper-slide .number h6 {
+#main .chart .track .swiper-slide .number h6 {
   padding: 0 20px;
   font-weight: 700;
 }
-.chart .track .swiper-slide .main--image--text span {
+#main .chart .track .swiper-slide .main--image--text span {
   font-size: 20px;
   font-weight: 700;
 }
-.chart .track .swiper-slide .main--image--text p {
+#main .chart .track .swiper-slide .main--image--text p {
   padding-top: 8px;
   font-size: 17px;
   color: #5e5e5e;
 }
-.chart .track .swiper-slide .main--image--icon {
+#main .chart .track .swiper-slide .main--image--icon {
   display: flex;
   justify-content: flex-end;
   position: absolute;
@@ -148,8 +154,34 @@ html, body {
   right: 30px;
   transform: translateY(-50%);
 }
-.chart .track .swiper-slide .main--image--icon a {
+#main .chart .track .swiper-slide .main--image--icon a {
   display: block;
 }
-
-/* .chart *//*# sourceMappingURL=style2.css.map */
+#main .chart .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: "CookieRun-Regular";
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
+}
+#main .chart .swiper-button-next:after {
+  font-size: 25px;
+  color: #333;
+  font-weight: bold;
+}
+#main .chart .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: "CookieRun-Regular";
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
+}
+#main .chart .swiper-button-prev:after {
+  font-size: 25px;
+  color: #333;
+  font-weight: bold;
+}/*# sourceMappingURL=style2.css.map */
