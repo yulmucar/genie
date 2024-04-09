@@ -91,6 +91,7 @@ body {
   font-family: "Pretendard";
   line-height: 1;
   color: #333;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -392,20 +393,21 @@ html, body {
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
 }
 #main .chart .track {
-  /* width: 1280px; */
+  width: 1410px;
+  /* width: 2560px; */
   height: 500px;
+  display: flex;
   /*  display: inline-block; */
-  /* display: flex; */
-  /* justify-content: space-between; */
   /* overflow-y: scroll; */
-  overflow-x: auto;
-  overflow-y: hidden;
+  /* overflow-x: auto;
+  overflow-y: hidden; */
 }
 #main .chart .track .track_list {
   max-width: 760px;
   width: 48.5%;
   white-space: nowrap;
   display: inline-block;
+  overflow: hidden;
 }
 #main .chart .track .track_list.on {
   /* max-width: 760px;                                  
@@ -510,14 +512,14 @@ html, body {
   line-height: 1.3;
   font-weight: 700;
 }
-#main .hot_artist .artist .track_list {
+#main .hot_artist .artist .track2_list {
   width: 48.5%;
 }
-#main .hot_artist .artist .track_list .scroll {
+#main .hot_artist .artist .track2_list .scroll {
   position: relative;
   overflow-x: auto;
 }
-#main .hot_artist .artist .track_list .scroll--list {
+#main .hot_artist .artist .track2_list .scroll--list {
   display: flex;
   align-items: center;
   height: 100px;
@@ -525,30 +527,30 @@ html, body {
   overflow-x: auto;
   overflow-y: hidden;
 }
-#main .hot_artist .artist .track_list .scroll--list--image {
+#main .hot_artist .artist .track2_list .scroll--list--image {
   width: 78px;
   height: 78px;
 }
-#main .hot_artist .artist .track_list .scroll--list--image img {
+#main .hot_artist .artist .track2_list .scroll--list--image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#main .hot_artist .artist .track_list .scroll .number h6 {
+#main .hot_artist .artist .track2_list .scroll .number h6 {
   padding: 0 20px;
   font-weight: 700;
 }
-#main .hot_artist .artist .track_list .scroll .main--image--text span {
+#main .hot_artist .artist .track2_list .scroll .main--image--text span {
   font-weight: 700;
   font-size: 20px;
 }
-#main .hot_artist .artist .track_list .scroll .main--image--text p {
+#main .hot_artist .artist .track2_list .scroll .main--image--text p {
   padding-top: 8px;
   font-size: 17px;
   color: #5e5e5e;
 }
-#main .hot_artist .artist .track_list .scroll .main--image--icon {
+#main .hot_artist .artist .track2_list .scroll .main--image--icon {
   display: flex;
   justify-content: flex-end;
   position: absolute;
@@ -556,7 +558,7 @@ html, body {
   right: 30px;
   transform: translateY(-50%);
 }
-#main .hot_artist .artist .track_list .scroll .main--image--icon a {
+#main .hot_artist .artist .track2_list .scroll .main--image--icon a {
   display: block;
 }
 #main .editor {

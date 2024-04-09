@@ -1,8 +1,8 @@
 $(function () {
   //링크방지
-  /* $('a').click(function (e) {
+  $('a').click(function (e) {
     e.preventDefault();
-  }); */
+  });
 
   //🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚스크립트시작
 
@@ -39,33 +39,24 @@ $(function () {
   }
 
 
-  //페이지
-  let list = document.querySelectorAll('track')[0];
-  /* let itemImage = list.getElementsByClassName('track')[0]; */
-  let prevBtn = list.getElementsByClassName('prev')[0];
-  let nextBtn = list.getElementsByClassName('next')[0];
-
-  // let image1 = 'track_list';
-  let image1 = list.getElementsByClassName('track_list')[0];
-  let image2 = list.getElementsByClassName('track_list')[1];
-  let image3 = list.getElementsByClassName('track_list')[2];
-  let image4 = list.getElementsByClassName('track_list')[3];
-
-  let imageWrap = [image1, image2, image3, image4];
+  //지니차트
+  let list = document.querySelectorAll('.track_list');
+  let prevBtn = document.getElementsByClassName('prev')[0];
+  let nextBtn = document.getElementsByClassName('next')[0];
 
   let i = 0;
 
   nextBtn.addEventListener('click', () => {
     i++;
-    if (i >= imageWrap.length) {
+    if (i >= list.length) {
       i = 0;
     }
-    track_list.forEach(function (item) {
+    list.forEach(function (item) {
       item.classList.remove('on');
     });
 
-    console.log(imageWrap[i])
-    track_list[i].classList.add('on');
+    console.log(list[i])
+    list[i].classList.add('on');
   })//nextBtn.click end
 
   prevBtn.addEventListener('click', () => {
@@ -76,14 +67,15 @@ $(function () {
       i = imageWrap.length - 1;
     }
 
-    track_list.forEach(function (item) {
+    list.forEach(function (item) {
       item.classList.remove('on')
     })
-    track_list[i].classList.add('on');
+    list[i].classList.add('on');
     /* itemImage.src = imageWrap[i]; */
     //click[i].classList.add('on');
 
   }); //prevBtn.click end
+
 
 
   //에디터탭메뉴
@@ -109,7 +101,6 @@ $(function () {
     mvList.removeClass('on');
     mvList.eq($(this).index()).addClass('on');
   })
-
 
 
   //슬라이드
