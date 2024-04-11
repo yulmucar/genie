@@ -40,7 +40,7 @@ $(function () {
 
 
   //지니차트
-  let list = document.querySelectorAll('.track_list');
+  /* let list = document.querySelectorAll('.track_list');
   let prevBtn = document.getElementsByClassName('prev')[0];
   let nextBtn = document.getElementsByClassName('next')[0];
 
@@ -74,9 +74,16 @@ $(function () {
     /* itemImage.src = imageWrap[i]; */
     //click[i].classList.add('on');
 
-  }); //prevBtn.click end
+  //}); */
 
-
+  //지니차트
+  var swiper = new Swiper(".track", {
+    slidesPerView: 2,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
   //에디터탭메뉴
   let editorMenu = $('.editor .editor_tab li');

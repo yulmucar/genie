@@ -237,6 +237,7 @@ html, body {
   padding-left: 250px;
   /* .main_visual end*/
   /* .new end */
+  /* .chart */
   /* .editor end */
   /* .mv end */
   /* .magazine end */
@@ -357,14 +358,13 @@ html, body {
   max-width: 1670px;
   margin: 100px 75px;
   position: relative;
-  /* .chart */
 }
 #main .chart .title {
   display: flex;
   justify-content: space-between;
 }
 #main .chart .title h4 {
-  font-size: 1.5rem;
+  font-size: 50px;
   font-weight: 600;
   padding-bottom: 20px;
 }
@@ -393,72 +393,88 @@ html, body {
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
 }
 #main .chart .track {
-  width: 1410px;
-  /* width: 2560px; */
   height: 500px;
-  display: flex;
-  /*  display: inline-block; */
-  /* overflow-y: scroll; */
-  /* overflow-x: auto;
-  overflow-y: hidden; */
+  position: static;
 }
-#main .chart .track .track_list {
-  max-width: 760px;
-  width: 48.5%;
-  white-space: nowrap;
-  display: inline-block;
-  overflow: hidden;
+#main .chart .track .swiper-slide {
+  /* max-width: 700px;                                  
+  width: 49.61%; */
+  /*  position: relative;  */
 }
-#main .chart .track .track_list.on {
-  /* max-width: 760px;                                  
-  width: 48.50%; */
-  transition: 1s;
-  transform: translateX(0);
-}
-#main .chart .track .track_list .scroll {
-  position: relative;
-}
-#main .chart .track .track_list .scroll--list {
+#main .chart .track .swiper-slide .scroll--list {
+  height: 100px;
   display: flex;
   align-items: center;
-  height: 100px;
+  margin-right: 30px;
   border-bottom: 1px solid #bebebe;
-  overflow-x: auto;
-  overflow-y: hidden;
 }
-#main .chart .track .track_list .scroll--list--image {
+#main .chart .track .swiper-slide .scroll--list--image {
   width: 78px;
   height: 78px;
 }
-#main .chart .track .track_list .scroll--list--image img {
+#main .chart .track .swiper-slide .scroll--list--image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#main .chart .track .track_list .scroll .number h6 {
+#main .chart .track .swiper-slide .number h6 {
   padding: 0 20px;
   font-weight: 700;
 }
-#main .chart .track .track_list .scroll .main--image--text span {
+#main .chart .track .swiper-slide .main--image--text span {
   font-size: 20px;
   font-weight: 700;
 }
-#main .chart .track .track_list .scroll .main--image--text p {
+#main .chart .track .swiper-slide .main--image--text p {
   padding-top: 8px;
   font-size: 17px;
   color: #5e5e5e;
 }
-#main .chart .track .track_list .scroll .main--image--icon {
+#main .chart .track .swiper-slide .main--image--icon {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   right: 30px;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }
-#main .chart .track .track_list .scroll .main--image--icon a {
+#main .chart .track .swiper-slide .main--image--icon a {
   display: block;
+}
+#main .chart .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: "CookieRun-Regular";
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
+  top: 60%;
+  right: -10px;
+  transform: translateY(-60%);
+}
+#main .chart .swiper-button-next:after {
+  font-size: 25px;
+  color: #333;
+  font-weight: bold;
+}
+#main .chart .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: "CookieRun-Regular";
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
+  top: 60%;
+  left: -10px;
+  transform: translateY(-60%);
+}
+#main .chart .swiper-button-prev:after {
+  font-size: 25px;
+  color: #333;
+  font-weight: bold;
 }
 #main .hot_artist {
   max-width: 1670px;
@@ -985,9 +1001,9 @@ html, body {
     font-size: 18px;
   }
   /* chart */
-  #main .chart .track .track_list .scroll .main--image--icon {
-    right: 0;
-  }
+  /* #main .chart .track .track_list .scroll .main--image--icon {
+      right: 0;
+  } */
   /* hot_artist */
   #main .hot_artist .artist .track_list .scroll .main--image--icon {
     right: 0;
@@ -1079,7 +1095,7 @@ html, body {
   #main .chart {
     margin: 100px 50px;
   }
-  #main .chart .track .track_list .scroll .main--image--icon {
+  #main .chart .track .swiper-slide .main--image--icon {
     display: none;
   }
   /* hot_artist */
@@ -1089,7 +1105,7 @@ html, body {
   #main .hot_artist .artist .artist--image--text p {
     font-size: 1.3rem;
   }
-  #main .hot_artist .artist .track_list .scroll .main--image--icon {
+  #main .hot_artist .artist .track2_list .scroll .main--image--icon {
     display: none;
   }
   /* editor */
@@ -1729,22 +1745,22 @@ html, body {
   #main .chart .title p {
     font-size: 16px;
   }
-  #main .chart .track {
-    height: 400px;
+  /* #main .chart .track {
+      height: 400px;
   }
   #main .chart .track .track_list .scroll--list {
-    height: 80px;
+      height: 80px;
   }
   #main .chart .track .track_list .scroll--list--image {
-    width: 60px;
-    height: 60px;
+      width: 60px;
+      height: 60px;
   }
   #main .chart .track .track_list .scroll .main--image--text span {
-    font-size: 17px;
+      font-size: 17px;
   }
   #main .chart .track .track_list .scroll .main--image--text p {
-    font-size: 15px;
-  }
+      font-size: 15px;
+  } */
   #main .hot_artist .artist {
     height: 700px;
   }
