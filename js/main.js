@@ -96,10 +96,11 @@ $(function () {
         slidesPerView: 2,
         spaceBetween: 30,
       }, 
-      1028: {
+      1024: {
         slidesPerView: 2,
         spaceBetween: 30,
       }, 
+
     },
   });
 
@@ -128,7 +129,7 @@ $(function () {
   })
 
 
-  //슬라이드
+  //뮤비슬라이드
   var swiper = new Swiper(".mv-list", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -139,15 +140,19 @@ $(function () {
     breakpoints: {
       767: {
         slidesPerView: 1.5,
-        spaceBetween: 30,
+        spaceBetween: 20,
       },
       1024: {
         slidesPerView: 2,
-        spaceBetween: 35,
+        spaceBetween: 20,
       },
       1280: {
         slidesPerView: 3,
-        spaceBetween: 35,
+        spaceBetween: 20,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
     },
   });

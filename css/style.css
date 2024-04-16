@@ -453,14 +453,15 @@ html, body {
   font-size: 20px;
   font-family: "CookieRun-Regular";
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
-  top: 60%;
+  top: 55%;
   right: -10px;
-  transform: translateY(-60%);
+  transform: translateY(-55%);
 }
 #main .chart .swiper-button-next:after {
-  font-size: 25px;
+  font-size: 20px;
   color: #333;
   font-weight: bold;
+  margin-left: 2px;
 }
 #main .chart .swiper-button-prev {
   width: 40px;
@@ -470,14 +471,15 @@ html, body {
   font-size: 20px;
   font-family: "CookieRun-Regular";
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.5764705882);
-  top: 60%;
+  top: 55%;
   left: -10px;
-  transform: translateY(-60%);
+  transform: translateY(-55%);
 }
 #main .chart .swiper-button-prev:after {
-  font-size: 25px;
+  font-size: 20px;
   color: #333;
   font-weight: bold;
+  margin-right: 2px;
 }
 #main .hot_artist {
   max-width: 1670px;
@@ -602,7 +604,7 @@ html, body {
   /* flex-wrap: nowrap; */
   gap: 1rem;
   margin-bottom: 30px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 #main .editor .editor_tab li {
   width: 130px;
@@ -1127,6 +1129,9 @@ html, body {
   /* mv */
   #main .mv {
     margin: 100px 50px;
+  }
+  #main .mv .swiper .swiper-slide .mv--item figure {
+    height: 20vw;
   }
   #main .mv .swiper .swiper-slide .mv--item .mv--text h6 {
     font-size: 23px;
@@ -1778,6 +1783,10 @@ html, body {
     height: 40px;
     line-height: 40px;
   }
+  #main .new {
+    height: 300px;
+    margin: 80px 20px 80px;
+  }
   #main .new .title h4 {
     font-size: 1.2rem;
   }
@@ -1786,6 +1795,32 @@ html, body {
   }
   #main .chart .title p {
     font-size: 16px;
+  }
+  #main .chart {
+    margin: 80px 20px 80px;
+    height: 400px;
+  }
+  #main .chart .track {
+    height: 350px;
+  }
+  #main .chart .track .swiper-slide .scroll--list {
+    height: 70px;
+  }
+  #main .chart .track .swiper-slide .scroll--list--image {
+    width: 50px;
+    height: 50px;
+  }
+  #main .chart .track .swiper-slide .main--image--text span {
+    font-size: 15px;
+  }
+  #main .chart .track .swiper-slide .main--image--text p {
+    font-size: 14px;
+  }
+  #main .chart .swiper-button-prev {
+    display: none;
+  }
+  #main .chart .swiper-button-next {
+    display: none;
   }
   /* #main .chart .track {
       height: 400px;
@@ -1803,6 +1838,9 @@ html, body {
   #main .chart .track .track_list .scroll .main--image--text p {
       font-size: 15px;
   } */
+  #main .hot_artist {
+    margin: 80px 20px 80px;
+  }
   #main .hot_artist .artist {
     height: 700px;
   }
@@ -1822,18 +1860,21 @@ html, body {
     font-size: 1rem;
     line-height: 1;
   }
-  #main .hot_artist .artist .track_list .scroll--list {
-    height: 80px;
+  #main .hot_artist .artist .track2_list .scroll--list {
+    height: 70px;
   }
-  #main .hot_artist .artist .track_list .scroll--list--image {
-    width: 60px;
-    height: 60px;
+  #main .hot_artist .artist .track2_list .scroll--list--image {
+    width: 50px;
+    height: 50px;
   }
-  #main .hot_artist .artist .track_list .scroll .main--image--text span {
-    font-size: 17px;
-  }
-  #main .hot_artist .artist .track_list .scroll .main--image--text p {
+  #main .hot_artist .artist .track2_list .scroll .main--image--text span {
     font-size: 15px;
+  }
+  #main .hot_artist .artist .track2_list .scroll .main--image--text p {
+    font-size: 14px;
+  }
+  #main .editor {
+    margin: 80px 20px 80px;
   }
   #main .editor .title h4 {
     font-size: 1.3rem;
@@ -1864,7 +1905,7 @@ html, body {
     border: 1px solid #6c6c6c;
   }
   #main .editor--list {
-    height: 550px;
+    height: 450px;
   }
   #main .editor--list--text {
     height: 110px;
@@ -1876,6 +1917,10 @@ html, body {
   #main .editor--list--text p {
     font-size: 14px;
     padding: 10px 0;
+    display: none;
+  }
+  #main .mv {
+    margin: 80px 20px 80px;
   }
   #main .mv .title h4 {
     font-size: 1.3rem;
@@ -1962,5 +2007,80 @@ html, body {
 @media screen and (max-width: 1024px) and (max-width: 320px) {
   .header .mobile_nav {
     padding: 15px;
+  }
+  #main .new {
+    height: 300px;
+    margin: 80px 20px 50px;
+  }
+  #main .chart {
+    margin: 50px 20px 50px;
+    height: 400px;
+  }
+  #main .chart .track {
+    height: 350px;
+  }
+  #main .chart .track .swiper-slide .scroll--list {
+    height: 70px;
+  }
+  #main .chart .track .swiper-slide .scroll--list--image {
+    width: 50px;
+    height: 50px;
+  }
+  #main .chart .track .swiper-slide .main--image--text span {
+    font-size: 15px;
+  }
+  #main .chart .track .swiper-slide .main--image--text p {
+    font-size: 14px;
+  }
+  #main .chart .swiper-button-prev {
+    display: none;
+  }
+  #main .chart .swiper-button-next {
+    display: none;
+  }
+  #main .hot_artist {
+    margin: 80px 20px 50px;
+  }
+  #main .hot_artist .artist {
+    height: 650px;
+  }
+  #main .hot_artist .artist .track2_list .scroll--list {
+    height: 70px;
+  }
+  #main .hot_artist .artist .track2_list .scroll--list--image {
+    width: 50px;
+    height: 50px;
+  }
+  #main .hot_artist .artist .track2_list .scroll .main--image--text span {
+    font-size: 15px;
+  }
+  #main .hot_artist .artist .track2_list .scroll .main--image--text p {
+    font-size: 14px;
+  }
+  #main .editor {
+    margin: 80px 20px 50px;
+  }
+  #main .editor .editor_tab li {
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+  }
+  #main .editor .editor_tab li.on {
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+  }
+  #main .editor--list {
+    height: 250px;
+    flex-wrap: nowrap;
+  }
+  #main .editor--list--item:nth-child(3) {
+    display: none;
+  }
+  #main .editor--list--item:nth-child(4) {
+    display: none;
+  }
+  #main .mv {
+    margin: 80px 20px 50px;
   }
 }/*# sourceMappingURL=style.css.map */
