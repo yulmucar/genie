@@ -1065,9 +1065,7 @@ html,body {
 }
 
 @media screen and (max-width: 1280px) {
-    #main .new {
-        
-    }
+
     #main .main_visual {
         margin: 0;
     }
@@ -1543,6 +1541,87 @@ html,body {
 }
 /* 600 */
 @media screen and (max-width: 600px) {
+    .header {
+        height: 80px;
+    }
+    .header .logo {
+        height: 80px;
+        line-height: 80px;
+    }    
+    .header .inner .mobile_saerch img {
+        width: 40px;
+        height: 40px;
+    }
+    .header .inner .mobile_menu img {
+        width: 35px;
+        height: 35px;
+    }
+    .header .mobile_nav .login {
+        height: 40px;
+        margin: 10px 0;
+    }
+    .header .mobile_nav .login p {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+    .header .mobile_nav .login img {
+        width: 40px;
+    }
+    .header .mobile_nav {
+        padding: 30px;
+    }
+    .header .mobile_nav .user {
+        height: 60px;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .header .mobile_nav .gnb {
+        margin: 20px  0 0;
+    }
+    .header .mobile_nav .gnb .depth01 {
+        padding: 10px 0;
+    }
+    .header .mobile_nav .gnb .depth01 p {
+        font-size: 18px;
+    }
+    .header .util .saerch {
+        height: 80px;
+    }
+    .header .util .saerch input[type=text] {
+        height: 60px;
+    }
+    .header .util .saerch--item {
+        width: 87%;
+    }
+    #main .chart .track .swiper-slide .scroll--list {
+        margin-right: 0;
+    }    
+    #main .editor--list {
+        height: 800px;
+    }
+    #main .editor .editor_tab li {
+        font-size: 18px;
+    }
+    #main .magazine .list--text h6 {
+        font-size: 18px;
+    }
+    #main .magazine .list--text p {
+        font-size: 16px;
+    }
+    #main .download .gin--text figure {
+        margin-bottom: 0;
+        height: 50px;
+    }
+    #main .download .gin--text figure img {
+        width: 90px;
+        height: 40px;
+    }    
+    #main .download .gin--text h3 {
+        font-size: 30px;
+    }
+    #main .download .gin--text--p p {
+        width: 110px;
+    }
     .play_list .play_buttom figure:nth-child(2) {
         display: none;
     }
@@ -1558,22 +1637,34 @@ html,body {
     .play_list .mini_album a figure {
         height: 40px;
     }
-    #main .editor .editor_tab li {
-        font-size: 18px;
-    }
 } 
-@media screen and (max-width: 490px) {
+
+@media screen and (max-width: 500px) {
+    .header .util .saerch--item {
+        width: 86%;
+    }
+    .header .inner .mobile_saerch img {
+        width: 45px;
+        height: 45px;
+    }
     #main .hot_artist .artist {
         height: 900px;
     }
     #main .editor--list {
         height: 700px;
     }
+
     #main .editor--list--item {
         width: 47.5%;
     }
     #main .editor--list--item figure {
         height: 34vw;
+    }
+    #main .editor--list--text {
+        height: 120px;
+    }
+    #main .editor--list--text h6 {
+        font-size: 18px;
     }
     #main .download .gin .bg figure {
         height: 52.08vw;
@@ -1586,13 +1677,13 @@ html,body {
         width: 90px;
         height: 40px;
     }
-    
     #main .download .gin--text h3 {
         font-size: 30px;
     }
     #main .download .gin--text--p p {
         width: 110px;
     }
+    
 } 
 /* 480 */
 @media screen and (max-width: 480px)  {
@@ -1641,6 +1732,12 @@ html,body {
     .header .mobile_nav .gnb .depth01 p {
         font-size: 18px;
     }
+    .header .util .saerch {
+        height: 60px;
+    }
+    .header .util .saerch input[type=text] {
+        height: 50px;
+    }
     /* main_visual */
     
     #main .main_visual .m_visual a figure {
@@ -1678,9 +1775,6 @@ html,body {
     #main .hot_artist .artist .artist--image--text p br {
         display: none;
     }
-    #main .editor--list {
-        height: 700px;
-    }
     #main .editor .editor_tab li {
         font-size: 18px;
         border: 1px solid #6c6c6c;
@@ -1688,11 +1782,19 @@ html,body {
     #main .editor .editor_tab li.on {
         border: 1px solid #0095ff;
     }
+    #main .editor--list {
+        height: 600px;
+    }
     #main .editor--list--item {
         width: 47%;
         height: 44.79vw;
     }
-    
+    #main .editor--list--text {
+        height: 100px;
+    }
+    #main .editor--list--text p {
+        padding: 0;
+    }
     #main .magazine .list {
         height: 400px;
     }
@@ -1704,7 +1806,7 @@ html,body {
     }
     #main .download .gin--text figure {
         margin-bottom: 0;
-        height: 50px;
+        height: 45px;
     }
     #main .download .gin--text figure img {
         width: 90px;
@@ -1760,6 +1862,9 @@ html,body {
     #main .main_visual .text h3 {
         font-size: 40px;
     }
+    #main .editor--list--text h6 {
+        font-size: 16px;
+    }
     #main .editor .editor_tab li.on {
         height: 35px;
         line-height: 35px;
@@ -1776,7 +1881,10 @@ html,body {
 @media screen and (max-width: 440px) {
     
     #main .editor .editor_tab {
-     gap:10px;   
+        gap:10px;   
+    }
+    #main .editor--list--text h6 {
+        font-size: 16px;
     }
     #main .editor .editor_tab li.on {
         height: 35px;
@@ -1792,7 +1900,7 @@ html,body {
     }
 }
 @media screen and (max-width: 360px) {
-    
+
     .header .inner .mobile_saerch img {
         width: 30px;
         height: 30px;
@@ -1800,6 +1908,17 @@ html,body {
     .header .inner .mobile_menu img {
         width: 30px;
         height: 30px;
+    }
+    
+    .header .util .saerch--item {
+        width: 80%;
+    }
+    .header .util .saerch--item img {
+        width: 35px;
+    }
+    .header .util .saerch .x img{
+        width: 25px;
+        height: 25px;
     }
     #main .new {
         margin: 100px 20px 250px;
@@ -1997,6 +2116,12 @@ html,body {
     }
     #main .magazine .list--text p {
         font-size: 15px;
+    }
+    #main .magazine .list--text h6 {
+        font-size: 15px;
+    }
+    #main .magazine .list--text p {
+        font-size: 14px;
     }
     #main .download .gin--text {
         padding: 10px;
