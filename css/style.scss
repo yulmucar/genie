@@ -1563,11 +1563,35 @@ html,body {
     }
 } 
 @media screen and (max-width: 490px) {
+    #main .hot_artist .artist {
+        height: 900px;
+    }
+    #main .editor--list {
+        height: 700px;
+    }
     #main .editor--list--item {
         width: 47.5%;
     }
     #main .editor--list--item figure {
         height: 34vw;
+    }
+    #main .download .gin .bg figure {
+        height: 52.08vw;
+    }
+    #main .download .gin--text figure {
+        margin-bottom: 0;
+        height: 50px;
+    }
+    #main .download .gin--text figure img {
+        width: 90px;
+        height: 40px;
+    }
+    
+    #main .download .gin--text h3 {
+        font-size: 30px;
+    }
+    #main .download .gin--text--p p {
+        width: 110px;
     }
 } 
 /* 480 */
